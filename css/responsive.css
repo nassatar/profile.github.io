@@ -293,15 +293,15 @@ ogo/* Large desktop :1920px. */
     .container-wrapper {width: 300px;}
     .container {width:300px}
     .mobile-menu .mean-bar {
-        background: url("../img/logo/title-icon-blue.jpg") no-repeat scroll left top;
+        background: url("../img/logo/zhongyao.png") no-repeat scroll left top;
         background-size:46px
     }
     .header-blue .mobile-menu .mean-bar {
-        background: url("../img/logo/title-icon-blue.jpg") no-repeat scroll left top;
+        background: url("../img/logo/zhongyao.png") no-repeat scroll left top;
         background-size:46px
     }
     .header-yellow .mobile-menu .mean-bar {
-        background: url("../img/logo/title-icon-blue.jpg") no-repeat scroll left top;
+        background: url("../img/logo/zhongyao.png") no-repeat scroll left top;
         background-size:46px
     }
     #main-menu {top: 40px}
