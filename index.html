@@ -14,16 +14,93 @@
 <!-- style CSS
 ============================================ -->
 <link rel="stylesheet" href="style.css">
+<style>
+	.entrance{
+		line-height:100px;
+		-webkit-animation: Demo1 3s ease-in-out infinite alternate running forwards;
+		animation: Demo1 3s ease-in-out infinite alternate running forwards;
+	}
 
+	@-webkit-keyframes Demo1 {
+		form {
+			bottom: 60px;
+		}
+		25%{
+			bottom: 10px
+		}
+		45% {
+			bottom: 35px
+		}
+		65%{
+			bottom: 10px
+		}
+		77%{
+			bottom: 25px
+		}
+		89%{
+			bottom: 10px
+		}
+		95%{
+			bottom:15px
+		}
+		to {
+			bottom: 10px;
+		}
+	}
+
+	@keyframes Demo1 {
+		form {
+			bottom: 60px;
+		}
+		25%{
+			bottom: 10px
+		}
+		45% {
+			bottom: 35px
+		}
+		65%{
+			bottom: 10px
+		}
+		77%{
+			bottom: 25px
+		}
+		89%{
+			bottom: 10px
+		}
+		95%{
+			bottom:15px
+		}
+		to {
+			bottom: 10px;
+		}
+</style>
 <!-- modernizr JS
 ============================================ -->
 <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
+<body style="overflow-y:hidden">
 <!--[if lt IE 8]>
 	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
+<div id="cover" style="text-align: center;position: fixed;height: 100%;overflow: hidden;z-index: 1000;background: #2d3e50">
+	<img src="img/logo/zhongyao.png" style="margin-top: 100px">
+	<h2 style="color: rgb(255,216,83); margin-top: 30px">绵阳中垚建筑<br>科技有限公司<br>
+		<h4 style="color: rgb(139,126,87);">Mianyang Zhongyao Construction Technology Co. Ltd </h4>
+	</h2>
+	<h5 style="color: rgb(255,216,83);margin-top: 20px;">北京华茂中天建筑规划设计有限公司<br>
+		江油事业部</h5>
+	<h5 style="color: rgb(255,216,83);margin-top: 20px;">四川原境建筑设计有限公司<br>
+		江油事业部
+	</h5>
+	<h4 style="color: white;position: absolute;bottom: 10px;width: 100%" class="entrance" onclick="showPage()">查看详情</h4>
+</div>
+<script>
+	function showPage(){
+		document.getElementById('cover').style.display = 'none'
+		document.body.style.overflowY = 'scroll'
+	}
+</script>
 <!--Header Area Start-->
 <header class="header-blue">
 	<!--Mainmenu Start-->
