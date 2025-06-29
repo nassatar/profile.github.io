@@ -1,478 +1,607 @@
-﻿<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>绵阳中垚建筑科技有限公司</title>
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>求职信息登记表</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-<!-- Google Fonts
-============================================ -->
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,800,700,600,500,300' rel='stylesheet' type='text/css'>
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
 
-<!-- style CSS
-============================================ -->
-<link rel="stylesheet" href="style.css">
-<style>
-	.entrance{
-		line-height:100px;
-		-webkit-animation: Demo1 3s ease-in-out infinite alternate running forwards;
-		animation: Demo1 3s ease-in-out infinite alternate running forwards;
-	}
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
 
-	@-webkit-keyframes Demo1 {
-		form {
-			bottom: 60px;
-		}
-		25%{
-			bottom: 10px
-		}
-		45% {
-			bottom: 35px
-		}
-		65%{
-			bottom: 10px
-		}
-		77%{
-			bottom: 25px
-		}
-		89%{
-			bottom: 10px
-		}
-		95%{
-			bottom:15px
-		}
-		to {
-			bottom: 10px;
-		}
-	}
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #3498db;
+    }
 
-	@keyframes Demo1 {
-		form {
-			bottom: 60px;
-		}
-		25%{
-			bottom: 10px
-		}
-		45% {
-			bottom: 35px
-		}
-		65%{
-			bottom: 10px
-		}
-		77%{
-			bottom: 25px
-		}
-		89%{
-			bottom: 10px
-		}
-		95%{
-			bottom:15px
-		}
-		to {
-			bottom: 10px;
-		}
-</style>
-<!-- modernizr JS
-============================================ -->
-<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      border-left: 4px solid #3498db;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .section-title span {
+      font-size: 0.9rem;
+      color: #e74c3c;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .form-row {
+      flex: 1 1 300px;
+      min-width: 250px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: border 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #3498db;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    }
+
+    .error {
+      color: #e74c3c;
+      font-size: 0.85rem;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .btn {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #2980b9;
+    }
+
+    .btn-danger {
+      background: #e74c3c;
+    }
+
+    .btn-danger:hover {
+      background: #c0392b;
+    }
+
+    .btn-success {
+      background: #2ecc71;
+    }
+
+    .btn-success:hover {
+      background: #27ae60;
+    }
+
+    .btn-small {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+
+    .custom-field {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .custom-field input {
+      flex: 1;
+    }
+
+    .education-item {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .education-item:first-child .remove-education {
+      display: none;
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .submit-btn {
+      background: #27ae60;
+      padding: 12px 40px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .submit-btn:hover {
+      background: #219653;
+    }
+
+    .required::after {
+      content: " *";
+      color: #e74c3c;
+    }
+
+    .delete-btn {
+      background: transparent;
+      border: none;
+      color: #e74c3c;
+      font-size: 1.5rem;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .delete-btn:hover {
+      background: rgba(231, 76, 60, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .form-row {
+        flex: 1 1 100%;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      .section {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
-<body style="overflow-y:hidden">
-<!--[if lt IE 8]>
-	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+<body>
+<div class="container">
+  <h1>求职信息登记表</h1>
 
-<div id="cover" style="text-align: center;position: fixed;height: 100%;overflow: hidden;z-index: 1000;background: #2d3e50">
-	<img src="img/logo/zhongyao.png" style="margin-top: 100px">
-	<h2 style="color: rgb(255,216,83); margin-top: 30px">绵阳中垚建筑<br>科技有限公司<br>
-		<h4 style="color: rgb(139,126,87);">Mianyang Zhongyao Construction Technology Co. Ltd </h4>
-	</h2>
-	<h5 style="color: rgb(255,216,83);margin-top: 20px;">北京华茂中天建筑规划设计有限公司<br>
-		江油事业部</h5>
-	<h5 style="color: rgb(255,216,83);margin-top: 20px;">四川原境建筑设计有限公司<br>
-		江油事业部
-	</h5>
-	<h4 style="color: white;position: absolute;bottom: 10px;width: 100%" class="entrance" onclick="showPage()">查看详情</h4>
+  <form id="jobApplicationForm">
+    <!-- 分区1: 基本信息 -->
+    <div class="section">
+      <h2 class="section-title">基本信息 <span>所有字段均为必填项</span></h2>
+      <div class="form-group">
+        <div class="form-row">
+          <label for="name" class="required">姓名</label>
+          <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+          <div class="error" id="nameError">请输入姓名</div>
+        </div>
+
+        <div class="form-row">
+          <label for="age" class="required">年龄</label>
+          <input type="number" id="age" name="age" placeholder="请输入您的年龄" min="18" max="70" required>
+          <div class="error" id="ageError">请输入有效年龄（18-70岁）</div>
+        </div>
+
+        <div class="form-row">
+          <label class="required">性别</label>
+          <select id="gender" name="gender" required>
+            <option value="">请选择性别</option>
+            <option value="male">男</option>
+            <option value="other">其他</option>
+          </select>
+          <div class="error" id="genderError">请选择性别</div>
+        </div>
+
+        <div class="form-row">
+          <label for="email" class="required">邮箱</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+          <div class="error" id="emailError">请输入有效的邮箱地址</div>
+        </div>
+
+        <div class="form-row">
+          <label for="phone" class="required">电话</label>
+          <input type="tel" id="phone" name="phone" placeholder="请输入您的电话号码" pattern="[0-9]{11}" required>
+          <div class="error" id="phoneError">请输入11位手机号码</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 分区2: 求职信息 -->
+    <div class="section">
+      <h2 class="section-title">求职信息 <span>默认字段不可删除</span></h2>
+      <div class="form-group">
+        <div class="form-row">
+          <label for="location" class="required">工作地点</label>
+          <input type="text" id="location" name="location" placeholder="期望工作城市" required>
+          <div class="error" id="locationError">请输入工作地点</div>
+        </div>
+
+        <div class="form-row">
+          <label for="salary" class="required">期望薪资</label>
+          <input type="text" id="salary" name="salary" placeholder="期望月薪（元）" required>
+          <div class="error" id="salaryError">请输入期望薪资</div>
+        </div>
+
+        <div class="form-row">
+          <label for="jobType" class="required">求职类型</label>
+          <select id="jobType" name="jobType" required>
+            <option value="">请选择求职类型</option>
+            <option value="full-time">全职</option>
+            <option value="part-time">兼职</option>
+            <option value="internship">实习</option>
+            <option value="contract">合同制</option>
+          </select>
+          <div class="error" id="jobTypeError">请选择求职类型</div>
+        </div>
+      </div>
+
+      <div id="customFieldsContainer">
+        <!-- 动态添加的自定义字段将出现在这里 -->
+      </div>
+
+      <button type="button" class="btn btn-small" id="addCustomField">
+        + 添加自定义字段
+      </button>
+    </div>
+
+    <!-- 分区3: 教育背景 -->
+    <div class="section">
+      <h2 class="section-title">教育背景 <span>第一项不可删除</span></h2>
+      <div id="educationContainer">
+        <div class="education-item">
+          <div class="form-group">
+            <div class="form-row">
+              <label for="school0" class="required">学校名称</label>
+              <input type="text" id="school0" name="school[]" placeholder="毕业院校名称" required>
+              <div class="error">请输入学校名称</div>
+            </div>
+
+            <div class="form-row">
+              <label for="major0" class="required">专业名称</label>
+              <input type="text" id="major0" name="major[]" placeholder="所学专业" required>
+              <div class="error">请输入专业名称</div>
+            </div>
+
+            <div class="form-row">
+              <label for="startDate0" class="required">开始时间</label>
+              <input type="month" id="startDate0" name="startDate[]" required>
+              <div class="error">请选择开始时间</div>
+            </div>
+
+            <div class="form-row">
+              <label for="endDate0" class="required">结束时间</label>
+              <input type="month" id="endDate0" name="endDate[]" required>
+              <div class="error">请选择结束时间</div>
+            </div>
+
+            <div class="form-row">
+              <label for="degree0" class="required">学历</label>
+              <select id="degree0" name="degree[]" required>
+                <option value="">请选择学历</option>
+                <option value="high-school">高中</option>
+                <option value="college">专科</option>
+                <option value="bachelor">本科</option>
+                <option value="master">硕士</option>
+                <option value="phd">博士</option>
+              </select>
+              <div class="error">请选择学历</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-small" id="addEducation">
+        + 添加教育经历
+      </button>
+    </div>
+
+    <div class="action-buttons">
+      <button type="button" class="btn" id="resetBtn">重置表单</button>
+      <button type="submit" class="btn submit-btn" id="submitBtn">提交表单</button>
+    </div>
+  </form>
 </div>
+
 <script>
-	function showPage(){
-		document.getElementById('cover').style.display = 'none'
-		document.body.style.overflowY = 'scroll'
-	}
-</script>
-<!--Header Area Start-->
-<header class="header-blue">
-	<!--Mainmenu Start-->
-	<div id="main-menu" class="sticker">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-md-2 hidden-sm hidden-xs">
-					<div class="logo">
-						<a href="index.html"><img src="img/logo/logo-2.png" alt="APNEW" /></a>
-					</div>
-				</div>
-				<div class="col-lg-8 col-md-10 hidden-sm hidden-xs">
-					<div class="main-menu float-right">
-						<nav>
-							<ul>
-								<li class="active"><a href="#banner">中垚</a></li>
-								<li><a href="#about">公司概述</a></li>
-								<li><a href="#pricing">核心成员</a></li>
-								<li><a href="#reviews">项目介绍</a></li>
-								<li><a href="#partner">战略伙伴</a></li>
-								<li><a href="#screenshots">联系我们</a></li>
-							</ul>
-						</nav>
-					</div>
-					<button type="button" class="menu-btn button-default button-blue">Download</button>
-				</div>
-				<div class="col-sm-12 hidden-lg hidden-md">
-					<div class="mobile-menu">
-						<nav>
-							<ul>
-								<li class="active"><a href="#banner">中垚</a></li>
-								<li><a href="#about">公司概述</a></li>
-								<li><a href="#pricing">核心成员</a></li>
-								<li><a href="#reviews">项目介绍</a></li>
-								<li><a href="#partner">战略伙伴</a></li>
-								<li><a href="#screenshots">联系我们</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--End of Mainmenu-->
-</header>
-<!--End of Header Area-->
-<!--Banner Area Start-->
-<div class="banner-area banner-blue" id="banner">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-7 col-md-8 col-sm-8 col-xs-12">
-				<div class="banner-text">
-					<div class="banner-table-cell">
-						<h1>企业介绍<br><span>Introduction</span></h1>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绵阳中垚建筑科技有限公司，系江油市九0三建筑设计有限责任公司改制后由主要设计技术骨干重新组建而成。公司设计团队成员全部具有大专以上学历，主要技术骨干均为本科及以上学历，工作经验丰富。团队主要承接大型国企、地方投资、民营企业、医院、房地产开发等工业与民用建筑项目设计，在中核建中核燃料元件有限公司、中国工程物理研究院各院所、四川省各地市州范围内均有大量的设计成果。</p>
-						<!--<div class="banner-buttons">-->
-							<!--<button type="button" class="button-default button-blue">Download</button>-->
-							<!--<a href="#" class="button-default button-white">Learn more</a>-->
-						<!--</div>-->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="service-area service-blue" id="about">
-	<div class="container">
-		<div class="row">
+  document.addEventListener('DOMContentLoaded', function() {
+    // 自定义字段计数器
+    let customFieldCount = 0;
 
-			<div class="col-md-12">
-				<div class="section-title text-center title-blue">
-					<h1>公司概述<br><span style="font-size: 14px">Company Introduction</span></h1>
-					<img src="img/icon/title-icon-blue.jpg" alt="">
-					<p style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绵阳中垚建筑科技有限公司，专注于大型国企、地方投资、民营企业、医院、房地产开发等工业与民用建筑项目设计，在中核建中核燃料元件有限公司、中国工程物理研究院各院所、四川省各地市州范围内均有大量的设计成果。
-					</p>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6">
-				<div class="single-item text-center">
-					<div class="single-item-icon">
-						<i class="zmdi zmdi-cloud-box"></i>
-					</div>
-					<h4 style="font-size: 18px;">设计理念</h4>
-					<h4 style="font-size: 16px;color: #2d3e50;">以人为本，尊重自然。</h4>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6">
-				<div class="single-item text-center">
-					<div class="single-item-icon">
-						<i class="zmdi zmdi-nature-people"></i>
-					</div>
-					<h4 style="font-size: 18px;">团队文化</h4>
-					<h4 style="font-size: 16px;color: #2d3e50;">态度决定一切，细节决定成败。</h4>
-				</div>
-			</div>
-			<div class="col-md-4 hidden-sm">
-				<div class="single-item text-center">
-					<div class="single-item-icon">
-						<i class="zmdi zmdi-calendar"></i>
-					</div>
-					<h4 style="font-size: 18px;">企业目标</h4>
-					<h4 style="font-size: 16px;color: #2d3e50;">成为以绵阳地区为支点，业务范围辐射全川的综合性专业建筑设计服务机构。</h4>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!--End of Service Area-->
-<!--Pricing Area Start-->
-<div class="pricing-area pricing-blue" id="pricing">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title text-center title-blue">
-					<h1>核心成员<br><span style="font-size: 14px">Founder Staffs</span></h1>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4 col-sm-4">
-				<div class="single-price-package">
-					<div class="price-title" style="display:flex">
-						<div class="price">
-							<img src="img/fengsong.png" alt="" style="width: 80px;margin-bottom: 10px;margin-left: 20px ">
-						</div>
-						<h3 style="padding-top: 14px;padding-left: 20px">冯 松<br><span style="font-size: 14px">总经理<br>总工程师</span></h3>
-					</div>
-					<div class="price-list" style="padding: 10px;text-align: left">
-						<ul>
-							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毕业于安徽工业大学建筑环境与设备工程专业，硕士学历；注册公用设备工程师（暖通空调）、一级建造师（市政公用）、注册咨询工程师（投资）、PMP项目管理师（美国）。</li>
-						</ul>
-					</div>
-				</div>
-				<div class="single-price-package">
-					<div class="price-title" style="display:flex">
-						<div class="price">
-							<img src="img/liuling.png" alt="" style="width: 80px;margin-bottom: 10px;margin-left: 20px ">
-						</div>
-						<h3 style="padding-top: 14px;padding-left: 20px">刘 玲<br><span style="font-size: 14px">技术副总<br>建筑专业负责人</span></h3>
-					</div>
-					<div class="price-list" style="padding: 10px;text-align: left">
-						<ul>
-							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毕业于四川师范大学建筑装饰工程专业，专科学历；二级建筑师，从事建筑设计工作10余年。</li>
-						</ul>
-					</div>
-				</div>
-				<div class="single-price-package">
-					<div class="price-title" style="display:flex">
-						<div class="price">
-							<img src="img/xukaihua.png" alt="" style="width: 80px;margin-bottom: 10px;margin-left: 20px ">
-						</div>
-						<h3 style="padding-top:14px;padding-left: 20px">徐开华<br><span style="font-size: 14px">业务副总<br>总图专业负责人</span></h3>
-					</div>
-					<div class="price-list" style="padding: 10px;text-align: left">
-						<ul>
-							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毕业于西南科技大学土木工程专业，本科学历；从事总图、绿化设计工作20余年。</li>
-						</ul>
-					</div>
-				</div>
-				<div class="single-price-package">
-					<div class="price-title" style="display:flex">
-						<div class="price">
-							<img src="img/luobing.png" alt="" style="width: 80px;margin-bottom: 10px;margin-left: 20px ">
-						</div>
-						<h3 style="padding-top: 14px;padding-left: 20px">罗 兵<br><span style="font-size: 14px">生产副总<br>安装专业负责人</span></h3>
-					</div>
-					<div class="price-list" style="padding: 10px;text-align: left">
-						<ul>
-							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毕业于四川轻化工大学电气工程及其自动化专业，本科学历；从事10kV及以下建筑电气设计工作多年。</li>
-						</ul>
-					</div>
-				</div>
-				<div class="single-price-package">
-					<div class="price-title" style="display:flex">
-						<div class="price">
-							<img src="img/hejun.png" alt="" style="width: 80px;margin-bottom: 10px;margin-left: 20px ">
-						</div>
-						<h3 style="padding-top: 20px;padding-left: 20px">贺 军<br><span style="font-size: 14px">董事</span></h3>
-					</div>
-					<div class="price-list" style="padding: 10px;text-align: left">
-						<ul>
-							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毕业于西南民族大学行政管理专业，本科学历；高级工程师、人力资源专家、担任大型地产企业副总裁多年，具有丰富的企业经营管理经验。</li>
-						</ul>
-					</div>
-				</div>
+    // 教育背景计数器
+    let educationCount = 1;
 
-			</div>
-		</div>
-	</div>
-</div>
-<!--End of Pricing Area-->
-<!--Testimonial Area Start-->
-<div class="download-area download-blue" id="reviews">
-	<div class="download-bg"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title text-center title-blue">
-					<h1 style="color:white">项目介绍<br><span style="font-size: 14px">Partial performance</span></h1>
-				</div>
-				<div class="row" style="color:white">
-					<div>
-						<h4 style="text-align: center;font-weight: 600;padding-top: 15px">903幼儿园</h4>
-						<img src="img/903.png">
-					</div>
-					<div>
-						<h4 style="text-align: center;font-weight: 600;padding-top: 15px">北川莫尼山农庄</h4>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该建筑为现代中式风格，灵感来自于中国传统建筑——土楼，结合当地的民族风貌，为二层综合餐饮建筑，建筑面积约2400m²。</p>
-						<img src="img/mnsz.png">
-					</div>
-					<div>
-						<h4 style="text-align: center;font-weight: 600;padding-top: 15px">江油农投屠宰场</h4>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此方案为一个组团建筑，包括一栋办公楼，一栋钢结构厂房、附属建筑及其厂区规划。</p>
-						<img src="img/tzc.png">
-						<img src="img/tzc2.png">
-						<img src="img/tzc3.png">
-					</div>
-					<div>
-						<h4 style="text-align: center;font-weight: 600;padding-top: 15px">武都-雁山湖</h4>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;坐落于山水之间的白色建筑，水天相接、诗情画意。一茶一水二人。</p>
-						<img src="img/ysh.png">
-					</div>
-					<div>
-						<h4 style="text-align: center;font-weight: 600;padding-top: 15px">西昌公厕</h4>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该西昌公厕项目由5个地区约20个公厕项目，5个区5个风格，此案例为川西风格，将公厕隐藏在建筑小品间。</p>
-						<img src="img/xcgc.png">
-						<img src="img/xcgc2.png">
-					</div>
-					<div>
-						<h4 style="text-align: center;font-weight: 600;padding-top: 15px">兰兰食品工业园</h4>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该企业为江油市一家大型食品加工企业。园区内办公楼、厂房等建筑均为我们设计。</p>
-						<img src="img/llgd.png">
-					</div>
-					<div>
-						<h4 style="text-align: center;font-weight: 600;padding-top: 15px">857产业复兴项目</h4>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目属于老工业区改造项目，项目内容主要包括：度假酒店、大型水上游乐场、漂流、大型停车场建设。规划用地面积约43000.00㎡</p>
-						<img src="img/857.png">
-						<img src="img/857-2.png">
-						<img src="img/857-3.png">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!--Testimonial Area Start-->
-<div class="testimonial-area testimonial-blue" id="partner">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title text-center title-blue">
-					<h1>战略伙伴<br><span style="font-size: 14px">Strategic partner</span></h1>
-				</div>
-				<div class="row" style="text-align: center">
-					<div>
-						<img src="img/hmzt.png">
-						<h4 style="font-weight: 600;padding-top: 15px">北京华茂中天建筑<br>规划设计有限公司</h4>
-						<p style="color: #05c2f9;">建筑行业甲级</p>
-					</div>
-					<div>
-						<img src="img/yj.png">
-						<h4 style="font-weight: 600;padding-top: 15px">四川原境建筑<br>
-							设计有限公司
-						</h4>
-						<p style="color: #05c2f9;">建筑行业乙级</p>
-					</div>
-					<div>
-						<img src="img/tw.png">
-						<h4 style="font-weight: 600;padding-top: 15px">四川省天问电力<br>
-							设计有限公司
-						</h4>
-						<p style="color: #05c2f9;">电力行业专业乙级</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!--End of Testimonial Area-->
-<!--Screenshots Area Start-->
-<footer class="footer-area footer-blue" id="screenshots">
-	<div class="footer-bg"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title text-center title-blue">
-					<h1 style="color:white">联系我们<br><span style="font-size: 14px">Contact Us</span></h1>
-					<div class="conatct-info">
-						<div class="single-contact-info">
-							<div class="contact-icon">
-								<i class="zmdi zmdi-phone"></i>
-							</div>
-							<div class="contact-text">
-							<span>13778085178<br>
-							15892636232</span>
-							</div>
-						</div>
-						<div class="single-contact-info">
-							<div class="contact-icon">
-								<i class="zmdi zmdi-globe-alt"></i>
-							</div>
-							<div class="contact-text">
-							<span>zyjzkj@163.com</span>
-							</div>
-						</div>
-						<div class="single-contact-info">
-							<div class="contact-icon">
-								<i class="zmdi zmdi-pin"></i>
-							</div>
-							<div class="contact-text">
-							<span>四川省江油市创客空间2027</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-<!--End of Screenshots Area-->
+    // 添加自定义字段
+    document.getElementById('addCustomField').addEventListener('click', function() {
+      const container = document.getElementById('customFieldsContainer');
+      const fieldId = `customField_${customFieldCount}`;
 
-<!-- jquery
-============================================ -->
-<script src="js/vendor/jquery-1.12.3.min.js"></script>
+      const fieldDiv = document.createElement('div');
+      fieldDiv.className = 'custom-field';
+      fieldDiv.innerHTML = `
+                    <input type="text" id="${fieldId}" name="customFields[]"
+                           placeholder="字段名称（例如：期望行业、到岗时间等）" required>
+                    <button type="button" class="delete-btn" title="删除字段">&times;</button>
+                `;
 
-<!-- bootstrap JS
-============================================ -->
-<script src="js/bootstrap.min.js"></script>
+      container.appendChild(fieldDiv);
+      customFieldCount++;
 
-<!-- wow JS
-============================================ -->
-<script src="js/wow.min.js"></script>
+      // 添加删除事件
+      fieldDiv.querySelector('.delete-btn').addEventListener('click', function() {
+        container.removeChild(fieldDiv);
+      });
+    });
 
-<!-- meanmenu JS
-============================================ -->
-<script src="js/jquery.meanmenu.js"></script>
+    // 添加教育背景
+    document.getElementById('addEducation').addEventListener('click', function() {
+      const container = document.getElementById('educationContainer');
+      const educationId = educationCount;
 
-<!-- scrollUp JS
-============================================ -->
-<script src="js/jquery.scrollUp.min.js"></script>
+      const educationItem = document.createElement('div');
+      educationItem.className = 'education-item';
+      educationItem.innerHTML = `
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="school${educationId}" class="required">学校名称</label>
+                            <input type="text" id="school${educationId}" name="school[]" placeholder="毕业院校名称" required>
+                            <div class="error">请输入学校名称</div>
+                        </div>
 
-<!-- Slick JS
-============================================ -->
-<script src="js/slick.min.js"></script>
+                        <div class="form-row">
+                            <label for="major${educationId}" class="required">专业名称</label>
+                            <input type="text" id="major${educationId}" name="major[]" placeholder="所学专业" required>
+                            <div class="error">请输入专业名称</div>
+                        </div>
 
-<!-- Nav JS
-============================================ -->
-<script src="js/jquery.nav.js"></script>
+                        <div class="form-row">
+                            <label for="startDate${educationId}" class="required">开始时间</label>
+                            <input type="month" id="startDate${educationId}" name="startDate[]" required>
+                            <div class="error">请选择开始时间</div>
+                        </div>
 
-<!-- 3D Carousel JS
-============================================ -->
-<script src="js/jquery.resize.ex.js"></script>
-<script src="js/waitforimages.js"></script>
-<script src="js/jquery.carousel-3d.min.js"></script>
+                        <div class="form-row">
+                            <label for="endDate${educationId}" class="required">结束时间</label>
+                            <input type="month" id="endDate${educationId}" name="endDate[]" required>
+                            <div class="error">请选择结束时间</div>
+                        </div>
 
-<!-- plugins JS
-============================================ -->
-<script src="js/plugins.js"></script>
+                        <div class="form-row">
+                            <label for="degree${educationId}" class="required">学历</label>
+                            <select id="degree${educationId}" name="degree[]" required>
+                                <option value="">请选择学历</option>
+                                <option value="high-school">高中</option>
+                                <option value="college">专科</option>
+                                <option value="bachelor">本科</option>
+                                <option value="master">硕士</option>
+                                <option value="phd">博士</option>
+                            </select>
+                            <div class="error">请选择学历</div>
+                        </div>
+                    </div>
+                    <button type="button" class="delete-btn remove-education" title="删除教育经历">&times;</button>
+                `;
 
-<!-- main JS
-============================================ -->
-<script src="js/main.js"></script>
-<script>
-	var useragent = navigator.userAgent;
-	if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
-		// 这里警告框会阻塞当前页面继续加载
-		alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
-		// 以下代码是用javascript强行关闭当前页面
-		var opened = window.open('about:blank', '_self');
-		opened.opener = null;
-		opened.close();
-	}
+      container.appendChild(educationItem);
+      educationCount++;
+
+      // 添加删除事件
+      educationItem.querySelector('.remove-education').addEventListener('click', function() {
+        container.removeChild(educationItem);
+      });
+    });
+
+    // 表单验证函数
+    function validateForm() {
+      let isValid = true;
+
+      // 验证基本信息的必填字段
+      const basicFields = ['name', 'age', 'gender', 'email', 'phone'];
+      basicFields.forEach(field => {
+        const element = document.getElementById(field);
+        const errorElement = document.getElementById(`${field}Error`);
+
+        if (!element.value.trim()) {
+          element.style.borderColor = '#e74c3c';
+          errorElement.style.display = 'block';
+          isValid = false;
+        } else {
+          element.style.borderColor = '#ddd';
+          errorElement.style.display = 'none';
+        }
+      });
+
+      // 验证求职信息的必填字段
+      const jobFields = ['location', 'salary', 'jobType'];
+      jobFields.forEach(field => {
+        const element = document.getElementById(field);
+        const errorElement = document.getElementById(`${field}Error`);
+
+        if (!element.value.trim()) {
+          element.style.borderColor = '#e74c3c';
+          errorElement.style.display = 'block';
+          isValid = false;
+        } else {
+          element.style.borderColor = '#ddd';
+          errorElement.style.display = 'none';
+        }
+      });
+
+      // 验证自定义字段
+      const customFields = document.querySelectorAll('input[name="customFields[]"]');
+      customFields.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = '#e74c3c';
+          isValid = false;
+        } else {
+          field.style.borderColor = '#ddd';
+        }
+      });
+
+      // 验证教育背景
+      const educationItems = document.querySelectorAll('.education-item');
+      educationItems.forEach(item => {
+        const inputs = item.querySelectorAll('input, select');
+        inputs.forEach(input => {
+          if (!input.value.trim()) {
+            input.style.borderColor = '#e74c3c';
+            isValid = false;
+          } else {
+            input.style.borderColor = '#ddd';
+          }
+        });
+      });
+
+      return isValid;
+    }
+
+    // 收集表单数据并输出为JSON
+    function collectFormData() {
+      // 基本信息
+      const basicInfo = {
+        name: document.getElementById('name').value,
+        age: document.getElementById('age').value,
+        gender: document.getElementById('gender').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value
+      };
+
+      // 求职信息
+      const jobInfo = {
+        location: document.getElementById('location').value,
+        salary: document.getElementById('salary').value,
+        jobType: document.getElementById('jobType').value,
+        customFields: []
+      };
+
+      // 自定义字段
+      const customFields = document.querySelectorAll('input[name="customFields[]"]');
+      customFields.forEach(field => {
+        if (field.value.trim()) {
+          jobInfo.customFields.push(field.value);
+        }
+      });
+
+      // 教育背景
+      const educationBackground = [];
+      const educationItems = document.querySelectorAll('.education-item');
+      educationItems.forEach((item, index) => {
+        educationBackground.push({
+          school: item.querySelector(`input[name="school[]"]`).value,
+          major: item.querySelector(`input[name="major[]"]`).value,
+          startDate: item.querySelector(`input[name="startDate[]"]`).value,
+          endDate: item.querySelector(`input[name="endDate[]"]`).value,
+          degree: item.querySelector(`select[name="degree[]"]`).value
+        });
+      });
+
+      // 组合所有数据
+      const formData = {
+        basicInfo: basicInfo,
+        jobInfo: jobInfo,
+        educationBackground: educationBackground
+      };
+
+      return formData;
+    }
+
+    // 表单提交事件
+    document.getElementById('jobApplicationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (validateForm()) {
+        const formData = collectFormData();
+
+        // 在控制台输出JSON格式的数据
+        console.log('表单数据:', JSON.stringify(formData, null, 2));
+
+        // 显示成功消息（实际应用中可替换为AJAX提交）
+        alert('表单提交成功！数据已输出到控制台');
+      } else {
+        alert('请填写所有必填字段！');
+      }
+    });
+
+    // 重置按钮
+    document.getElementById('resetBtn').addEventListener('click', function() {
+      document.getElementById('jobApplicationForm').reset();
+
+      // 重置错误显示
+      document.querySelectorAll('.error').forEach(el => {
+        el.style.display = 'none';
+      });
+
+      // 重置边框颜色
+      document.querySelectorAll('input, select').forEach(el => {
+        el.style.borderColor = '#ddd';
+      });
+
+      // 删除所有自定义字段（保留默认字段）
+      document.getElementById('customFieldsContainer').innerHTML = '';
+      customFieldCount = 0;
+
+      // 删除额外的教育背景（保留第一个）
+      const educationContainer = document.getElementById('educationContainer');
+      while (educationContainer.children.length > 1) {
+        educationContainer.removeChild(educationContainer.lastChild);
+      }
+      educationCount = 1;
+    });
+  });
 </script>
 </body>
 </html>
